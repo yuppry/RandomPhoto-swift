@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         // set title normal state
         button.setTitle("Random Photo", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 20
+        button.layer.borderWidth = 0
+        button.layer.backgroundColor = UIColor.white.cgColor
         return button
     }()
     
@@ -63,9 +66,9 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        button.frame = CGRect(x: 20,
+        button.frame = CGRect(x: 30,
                               y: view.frame.size
-                                .height-150-view.safeAreaInsets.bottom,
+                                .height-170-view.safeAreaInsets.bottom,
                               width: view.frame.size.width-60,
                               height: 55
         )
